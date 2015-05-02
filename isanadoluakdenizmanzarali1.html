@@ -1,0 +1,43 @@
+<html>
+    <head>
+    
+	<style type="text/css">
+	body{ background-image : url('background.jpg');
+		background-size : cover ;
+	}
+	</style>
+    </head>
+    <body>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script language="JavaScript">
+
+    function checkButton(){
+        if(document.form1.onyirmi.checked == true){
+         document.write("10-20");   
+   window.location.replace("isakdenizanadolumanzaralionyirmi1.php");
+   
+        } else if(document.form1.yirmibirkirk.checked == true){
+         document.write("21-40");   
+   window.location.replace("isakdenizanadolumanzaraliyirmibirkirk1.php");
+   
+      } else if(document.form1.kirkbiruzeri.checked == true){
+            document.write("41 uzeri");
+   window.location.replace("isakdenizanadolumanzaralikirkbiruzeri1.php");
+   
+        }
+    }
+  
+    </script>
+    <form name="form1">
+    <input type="radio" name=onyirmi>10-20 TL
+    <br>
+    <input type="radio" name=yirmibirkirk>21-40 TL	<br>
+   <input type="radio" name=kirkbiruzeri>41 TL ve üzeri
+    <br>
+  
+  
+  
+   <INPUT type="button" value="İleri" onClick='checkButton()'>
+    </form>
+    </body>
+    </html>
