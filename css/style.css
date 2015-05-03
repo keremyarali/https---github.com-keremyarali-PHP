@@ -1,0 +1,91 @@
+	body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#canberk-logo {
+    width: 160px;
+    float: left;
+    display: inline-block;
+}
+
+.nav {
+    width: 100%;
+    background-color: #3b3131;
+    min-height: 100px;
+}
+
+#menu {
+    float: right;
+    padding: 30px 20px 0px 0;
+    list-style: none;
+}
+
+#menu li {
+    float: left;
+    margin-right: 25px;
+}
+
+#menu li a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+#main,
+#about,
+#mekan {
+    width: 100%;
+}
+
+#main img {
+    max-width: 70%;
+    height: auto;
+}
+
+.canberk-slogan {
+    padding: 70px 25% 70px 25%;
+    background-color: #3b3131;
+}
+
+#about,
+#mekan {
+    margin-top: 70px;
+}
+
+#about {
+    padding: 0 50px;
+}
+
+.canberk-slogan img,
+#mekan img {
+    float: left;
+}
+
+#mekan img {
+    display : block ;
+	max-width: 30%;
+    height: auto;
+    border-radius: 15px;
+    margin: 0 50px 50px 20px;
+}
+
+#mekan span {
+    padding: 50px 50px 0 0;
+    display: block;
+    font-size: 24px; 
+	/*mekanlar kısmı yazı boyutu güzel mi?*/
+    line-height: 30px;
+    text-align: justify;
+}
+
+.canberk-slogan div span {
+	/*ana sayfa en alt yazı boyutu iyi mi?*/
+    font-size: 24px;
+    display: block;
+    color: white;
+    margin-left: 50px;
+    line-height: 60px;
+}
