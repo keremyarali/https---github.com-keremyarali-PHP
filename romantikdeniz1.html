@@ -1,0 +1,34 @@
+<html>
+    <head>
+   
+	<style type="text/css">
+	body{ background-image : url('background.jpg');
+		background-size : cover ;
+	}
+	</style>
+    </head>
+    <body>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script language="JavaScript">
+   
+    function checkButton(){
+        if(document.form1.anadolu.checked == true){
+            document.write("Anadolu Yakası seçildi.");
+   window.location.replace("romantikdenizanadolu1.html");
+        } else if(document.form1.avrupa.checked == true){
+            document.write("Avrupa Yakası seçildi.");
+   window.location.replace("romantikdenizavrupa1.html");
+       
+        }
+    }
+   
+    </script>
+    <form name="form1">
+    <input type="radio" name=anadolu>Anadolu Yakası
+	<br>
+    <input type="radio" name=avrupa>Avrupa Yakası
+	<br></br>
+    <INPUT type="button" value="İleri" onClick='checkButton()'>
+    </form>
+    </body>
+    </html>
