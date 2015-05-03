@@ -36,14 +36,24 @@ $findrestoran=mysql_query("SELECT tur.turbilgileri,kimle.kisibilgileri,restoranr
 if($findrestoran==FALSE){
 die(mysql_error());
 }
-
+echo "<table border='1'>";
 if($_POST['ara']=='uygun'){
 echo "<font face='Avenir Next'>Engelli dostu restoran seçildi";
 while($row=mysql_fetch_array($findrestoran)){
 $url=$row['url_add'];
 $restoranadi=$row['restoranadi'];
-echo '<br>';
+echo "<tr>";
+echo "<td>";
+echo "<td>Kategori</td>";
+$kimle=$row['kisibilgileri'];
+$turbilgi=$row['turbilgileri'];
+echo "</tr>";
+echo"<td>";
+echo "Restoran Adı";
 echo "<font face='Avenir Next'><p><a href='$url'>$restoranadi</p></a>";
+echo "<td>";
+echo "$kimle";
+echo "$turbilgi";
 }
 }
 echo "<table border='1'>";
@@ -67,41 +77,84 @@ echo "$turbilgi";
 
 }
 }
+echo"<table border='1'>";
 if($_POST['ara']=='canlimuzikvar'){
 echo "<font face='Avenir Next'>Canlı müzik seçildi";
 while($row=mysql_fetch_array($findrestoran)){
+echo "<tr>";
+echo "<td>";
+echo "<td>Kategori</td>";
 $url=$row['url_add'];
 $restoranadi=$row['restoranadi'];
-echo '<br>';
-echo "<font face='Avenir Next'><p><a href='$url'>$restoranadi</p></a>";
+$kimle=$row['kisibilgileri'];
+$turbilgileri=$row['turbilgileri'];
+echo '</tr>';
+echo "<td>";
+echo "Restoran Adı";
+echo "<p><font face='Avenir Next'><a href='$url'>$restoranadi</p></a>";
+echo "<td>";
+echo "$kimle";
+echo "$turbilgileri";
 }
 }
-
+echo"<table border='1'>";
 if($_POST['ara']=='var'){
 echo "<font face='Avenir Next'>Otopark seçildi";
 while($row=mysql_fetch_array($findrestoran)){
+echo "<tr>";
+echo "<td>";
+echo "<td>Kategori</td>";
 $url=$row['url_add'];
 $restoranadi=$row['restoranadi'];
-echo '<br>';
+$kimle=$row['kisibilgileri'];
+$turbilgileri=$row['turbilgileri'];
+echo '</tr>';
+echo "<td>";
+echo "Restoran Adı";
 echo "<p><font face='Avenir Next'><a href='$url'>$restoranadi</p></a>";
+echo "<td>";
+echo "$kimle";
+echo "$turbilgileri";
 }
 }
+echo"<table border='1'>";
 if($_POST['ara']=='oyunodasivar'){
 echo "<font face='Avenir Next'>Oyun odası seçildi";
 while($row=mysql_fetch_array($findrestoran)){
+echo "<tr>";
+echo "<td>";
+echo "<td>Kategori</td>";
 $url=$row['url_add'];
 $restoranadi=$row['restoranadi'];
-echo '<br>';
+$kimle=$row['kisibilgileri'];
+$turbilgileri=$row['turbilgileri'];
+echo '</tr>';
+echo "<td>";
+echo "Restoran Adı";
 echo "<p><font face='Avenir Next'><a href='$url'>$restoranadi</p></a>";
+echo "<td>";
+echo "$kimle";
+echo "$turbilgileri";
 }
 }
+echo "<table border='1'>";
 if($_POST['ara']=='dismekanvar'){
 echo "<font face='Avenir Next'>Dış mekan seçildi";
 while($row=mysql_fetch_array($findrestoran)){
+echo "<tr>";
+echo "<td>";
+echo "<td>Kategori</td>";
+$kimle=$row['kisibilgileri'];
 $url=$row['url_add'];
 $restoranadi=$row['restoranadi'];
-echo '<br>';
+$turbilgileri=$row['turbilgileri'];
+echo '</tr>';
+echo "<td>";
+echo "Restoran Adı";
 echo "<p><font face='Avenir Next'><a href='$url'>$restoranadi</p></a>";
+echo "<td>";
+echo "$kimle";
+echo "$turbilgileri";
 }
 }
 
